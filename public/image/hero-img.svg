@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="438" height="413" viewBox="0 0 438 413">
+  <g id="Group_1" data-name="Group 1" transform="translate(-1023 -339)">
+    <g id="ChatBoxBG" transform="translate(1023 339)" fill="none" stroke="#fff" stroke-width="11">
+      <rect width="438" height="413" rx="35" stroke="none"/>
+      <rect x="5.5" y="5.5" width="427" height="402" rx="29.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="281" height="14" rx="7" transform="translate(1121 400)" fill="#f9c160"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="281" height="14" rx="7" transform="translate(1121 432)" fill="#f9c160"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="148" height="14" rx="7" transform="translate(1121 464)" fill="#f9c160"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1066 392)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="23.5" cy="23.5" r="23.5" stroke="none"/>
+      <circle cx="23.5" cy="23.5" r="23" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-person" data-name="Icon ionic-ios-person" d="M31.486,30.818c-.506-2.236-3.4-3.326-4.395-3.677a32.764,32.764,0,0,0-3.663-.7,3.722,3.722,0,0,1-1.695-.78c-.281-.337-.112-3.466-.112-3.466a10.429,10.429,0,0,0,.8-1.526A19.68,19.68,0,0,0,23.013,18s.577,0,.78-1.013a9.962,9.962,0,0,0,.52-2.355c-.042-.809-.485-.788-.485-.788a12.328,12.328,0,0,0,.478-3.607c.063-2.89-2.2-5.738-6.3-5.738-4.155,0-6.37,2.848-6.307,5.738a12.859,12.859,0,0,0,.471,3.607s-.443-.021-.485.788a9.962,9.962,0,0,0,.52,2.355c.2,1.013.78,1.013.78,1.013a19.68,19.68,0,0,0,.591,2.665,10.429,10.429,0,0,0,.8,1.526s.169,3.129-.113,3.466a3.722,3.722,0,0,1-1.695.78,32.764,32.764,0,0,0-3.663.7c-1,.352-3.888,1.441-4.395,3.677a.562.562,0,0,0,.555.682H30.938A.561.561,0,0,0,31.486,30.818Z" transform="translate(1071.5 396)" fill="#f9c160"/>
+    <rect id="Rectangle_2-2" data-name="Rectangle 2" width="281" height="14" rx="7" transform="translate(1121 506)" fill="#8d60f9"/>
+    <rect id="Rectangle_3-2" data-name="Rectangle 3" width="281" height="14" rx="7" transform="translate(1121 538)" fill="#8d60f9"/>
+    <rect id="Rectangle_4-2" data-name="Rectangle 4" width="78" height="14" rx="7" transform="translate(1121 570)" fill="#8d60f9"/>
+    <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(1066 498)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="23.5" cy="23.5" r="23.5" stroke="none"/>
+      <circle cx="23.5" cy="23.5" r="23" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-person-2" data-name="Icon ionic-ios-person" d="M31.486,30.818c-.506-2.236-3.4-3.326-4.395-3.677a32.764,32.764,0,0,0-3.663-.7,3.722,3.722,0,0,1-1.695-.78c-.281-.337-.112-3.466-.112-3.466a10.429,10.429,0,0,0,.8-1.526A19.68,19.68,0,0,0,23.013,18s.577,0,.78-1.013a9.962,9.962,0,0,0,.52-2.355c-.042-.809-.485-.788-.485-.788a12.328,12.328,0,0,0,.478-3.607c.063-2.89-2.2-5.738-6.3-5.738-4.155,0-6.37,2.848-6.307,5.738a12.859,12.859,0,0,0,.471,3.607s-.443-.021-.485.788a9.962,9.962,0,0,0,.52,2.355c.2,1.013.78,1.013.78,1.013a19.68,19.68,0,0,0,.591,2.665,10.429,10.429,0,0,0,.8,1.526s.169,3.129-.113,3.466a3.722,3.722,0,0,1-1.695.78,32.764,32.764,0,0,0-3.663.7c-1,.352-3.888,1.441-4.395,3.677a.562.562,0,0,0,.555.682H30.938A.561.561,0,0,0,31.486,30.818Z" transform="translate(1071.5 502)" fill="#8d60f9"/>
+    <rect id="Rectangle_2-3" data-name="Rectangle 2" width="281" height="14" rx="7" transform="translate(1121 612)" fill="#74f960"/>
+    <rect id="Rectangle_3-3" data-name="Rectangle 3" width="281" height="14" rx="7" transform="translate(1121 644)" fill="#74f960"/>
+    <rect id="Rectangle_4-3" data-name="Rectangle 4" width="117" height="14" rx="7" transform="translate(1121 676)" fill="#74f960"/>
+    <g id="Ellipse_1-3" data-name="Ellipse 1" transform="translate(1066 604)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="23.5" cy="23.5" r="23.5" stroke="none"/>
+      <circle cx="23.5" cy="23.5" r="23" fill="none"/>
+    </g>
+    <path id="Icon_ionic-ios-person-3" data-name="Icon ionic-ios-person" d="M31.486,30.818c-.506-2.236-3.4-3.326-4.395-3.677a32.764,32.764,0,0,0-3.663-.7,3.722,3.722,0,0,1-1.695-.78c-.281-.337-.112-3.466-.112-3.466a10.429,10.429,0,0,0,.8-1.526A19.68,19.68,0,0,0,23.013,18s.577,0,.78-1.013a9.962,9.962,0,0,0,.52-2.355c-.042-.809-.485-.788-.485-.788a12.328,12.328,0,0,0,.478-3.607c.063-2.89-2.2-5.738-6.3-5.738-4.155,0-6.37,2.848-6.307,5.738a12.859,12.859,0,0,0,.471,3.607s-.443-.021-.485.788a9.962,9.962,0,0,0,.52,2.355c.2,1.013.78,1.013.78,1.013a19.68,19.68,0,0,0,.591,2.665,10.429,10.429,0,0,0,.8,1.526s.169,3.129-.113,3.466a3.722,3.722,0,0,1-1.695.78,32.764,32.764,0,0,0-3.663.7c-1,.352-3.888,1.441-4.395,3.677a.562.562,0,0,0,.555.682H30.938A.561.561,0,0,0,31.486,30.818Z" transform="translate(1071.5 608)" fill="#74f960"/>
+  </g>
+</svg>

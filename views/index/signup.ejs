@@ -1,0 +1,108 @@
+<div id="app">
+    <div class="signup-form">
+        <h3>Signup</h3>
+        <% if (hasErrors) {%>
+            <div class="error">
+                <% messages.forEach(function(message){ %>
+                    <p>
+                        <%= message %>
+                    </p>
+                    <% }); %>
+            </div>
+            <% } %>
+
+                <form class="form" action="/signup" method="POST">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <div class="form-section">
+                        <h4>Your Information</h4>
+                        <div class="form-section-grid">
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="firstName">First Name*</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="lastName">Last Name*</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="dateOfBirth">Date of Birth*</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Let create an account</h4>
+                        <div class="form-section-grid">
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="username">Username*</label>
+                                <input type="text" id="username" name="username" required>
+                            </div>
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="email">Email*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="password">Password*</label>
+                                <input v-model="password" @change="checkPassword" type="password" name="password" required>
+                                <p v-show="showPwdError" class="error">
+                                    The password can only and have one of each of the following a-z, A-Z, and 0-9.
+                                </p>
+                            </div>
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="confPassword">Confirm Password*</label>
+                                <input v-model="confPassword" @change="checkConfirmPassword" type="password"
+                                    class="form-control" id="confPassword" name="confPassword" required>
+                                <p v-show="showConfPwdError" class="error">Confirm password does not match your
+                                    password.
+                                </p>
+                            </div>
+                            <div class="form-section-grid-item-full">
+                                <label class="input-label">Security Question*</label>
+                                <select name="questions" id="questions">
+                                    <option value="1">What is the street you grew up on?</option>
+                                    <option value="2">What is your favorite sports team?</option>
+                                    <option value="3">What is your mother's maiden name?</option>
+                                </select>
+                            </div>
+                            <div class="form-section-grid-item-full">
+                                <label class="input-label" for="answer">Answer*</label>
+                                <input type="text" id="answer" name="answer" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Optional Information</h4>
+                        <div class="form-section-grid">
+                            <div class="form-section-grid-radio">
+                                <p class="form-section-grid-radio-header">Gender</p>
+                                <div class="form-section-grid-radio-item">
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="form-section-grid-radio-item">
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                </div>
+                                <div class="form-section-grid-radio-item-end">
+                                    <input type="radio" id="other" name="gender" value="other" checked>
+                                    <label for="other">Other</label>
+                                </div>
+                            </div>
+                            <div class="form-section-grid-item">
+                                <label class="input-label" for="location">Where do you live</label>
+                                <input type="text" id="location" name="location">
+                            </div>
+                            <div class="form-section-grid-item-full">
+                                <label class="input-label" for="bio">Biography</label>
+                                <textarea id="bio" name="bio"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <input type="submit" class="btn-submit" value="Signup">
+                </form>
+    </div>
+</div>

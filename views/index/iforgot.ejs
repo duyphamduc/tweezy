@@ -1,0 +1,37 @@
+<section class="hero">
+    <div class="login-form">
+        <h3>Recover Password</h3>
+        <% if (hasErrors) {%>
+            <div class="error">
+                <% messages.forEach(function(message){ %>
+                    <p><%= message %></p>
+                <% }); %>
+            </div>
+        <% } %>
+        <form class="form" action="/iforgot" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="form-item">
+                <label class="input-label" for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+
+            <div class="form-item">
+                <label class="input-label">Security Question*</label>
+                <select name="questions" id="questions">
+                    <option value="1">What is the street you grew up on?</option>
+                    <option value="2">What is your favorite sports team?</option>
+                    <option value="3">What is your mother's maiden name?</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label class="input-label" for="answer">Answer*</label>
+                <input type="text" id="answer" name="answer" required>
+            </div>
+
+            <div class="form-col"></div>
+
+            <input type="submit" class="btn-submit" value="Next">
+        </form>
+    </div>
+</section>

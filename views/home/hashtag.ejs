@@ -1,0 +1,19 @@
+<!-- View list of all People -->
+<div class="box">
+    <h2 class="title is-2">
+        <%= title %>
+    </h2>
+    <div class="card">
+        <div class="card-content is-paddingless">
+            <% if (hashtagList.length != 0) {%>
+                <% hashtagList.forEach(function(hashtag){ %>
+                <div class="trendsitem">
+                  <a href="<%= hashtag.link %>"><strong>#<%= hashtag.text %></strong></a>
+                  <br>
+                  <small><%= hashtag.count %> tweez</small>
+                </div>
+                <% }) %>
+              <% } %>
+        </div>
+    </div>
+</div>

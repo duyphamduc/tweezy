@@ -1,0 +1,37 @@
+<!-- View list of all People -->
+<div class="box">
+    <h2 class="title is-2">
+        <%= title %>
+    </h2>
+    <div class="card">
+        <div class="card-content is-paddingless">
+            <% if (people !=null) {%>
+                <% people.forEach(function(person){ %>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-32x32">
+                                <img src="../image/temp-profile-img.png" class="is-rounded">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p>
+                                <a href="/user/<%= person.username %>"><strong><%= person.name %></strong></a>
+                                
+                                <br><small>@<%= person.username %></small>
+                            </p>
+                        </div>
+                        <div class="media-right">
+                            <a class="button is-link is-rounded" href="/<%= person.link %>">
+                                <% if (person.followed) {%>
+                                    Unfollow
+                                    <% } else { %>
+                                        Follow
+                                        <% } %>
+                            </a>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+    </div>
+</div>

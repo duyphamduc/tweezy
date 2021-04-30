@@ -1,0 +1,117 @@
+<!--View Tweet-->
+<% if (feedResults != null) {%>
+<% feedResults.forEach(function(feed){ %>
+    <div class="box is-marginless">
+    <div class="media">
+        <div class="media-left">
+        <figure class="image is-64x64">
+            <img src="https://i.ibb.co/Z8CkzFF/profile-img.png" alt="Image" class="is-rounded">
+        </figure>
+        </div>
+        <div class="media-content">
+        <div class="content">
+            <p>
+            <a href="/user/<%= feed.username %>"><strong><%= feed.name %></strong></a>
+            <small>@<%= feed.username %></small> &middot; <small><%= feed.timeElapse %></small>
+            <br>
+            <div name="postContent">
+                <%= feed.post %>
+            </div>
+            </p>
+        </div>
+        <nav class="level is-mobile">
+            <div class="level-left">
+            <a class="level-item" aria-label="reply" onclick="toggleComment('<%= feed.postId %>');">
+                <span class="icon is-small">
+                <i class="fas fa-comments" aria-hidden="true">&nbsp;<%= feed.comments.length %></i>
+                </span>
+            </a>
+            <a class="level-item" aria-label="like" href="/post/like/<%= feed.postId %>">
+                <span class="icon is-small">
+                <% if (feed.isLiked) {%> <i class="fas fa-heart" aria-hidden="true">&nbsp;<%= feed.likeCount %></i>
+                <%} else {%> <i class="far fa-heart" aria-hidden="true">&nbsp;<%= feed.likeCount %></i> <% } %>
+                </span>
+            </a>
+            <% if (feed.canDelete) {%>
+            <a class="level-item" aria-label="delete" href="/post/delete/<%= feed.postId %>">
+                <span class="icon is-small">
+                <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                </span>
+            </a>
+            <% } %>
+            </div>
+        </nav>
+        <!-- Comment Form (Text area to write comment) -->
+        <div class="is-marginless is-hidden" id="<%= feed.postId %>">
+            <div class="media">
+            <div class="media-left">
+                <figure class="image is-48x48">
+                <img src="https://i.ibb.co/Z8CkzFF/profile-img.png" alt="Image" class="is-rounded">
+                </figure>
+            </div>
+            <div class="media-content">
+                <form action="/post/comment/<%= feed.postId %>" method="POST">
+                <div class="content">
+                    <textarea class="textarea" name="post" placeholder="Hello" rows="3"></textarea>
+                </div>
+                <input type="submit" class="button is-link is-rounded" value="Comment">
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <% var comments = feed.comments; %>
+        <% if (comments.length > 0) { %>
+            <% comments.forEach(function(comment){ %>
+            <article class="media">
+                <figure class="media-left">
+                <p class="image is-48x48">
+                    <img src="https://i.ibb.co/Z8CkzFF/profile-img.png">
+                </p>
+                </figure>
+                <div class="media-content">
+                <div class="content">
+                    <p>
+                    <a href="/user/<%= comment.username %>"><strong><%= comment.name %></strong></a>
+                    <small>@<%= comment.username %></small> &middot; <small><%= comment.timeElapse %></small>
+                    <br>
+                    <div name="postContent">
+                        <%= comment.post %>
+                    </div>
+                    </p>
+                </div>
+                <nav class="level is-mobile">
+                    <div class="level-left">
+                    <a class="level-item" aria-label="like" href="/post/like/<%= comment.postId %>">
+                        <span class="icon is-small">
+                        <% if (comment.isLiked) {%> <i class="fas fa-heart" aria-hidden="true">&nbsp;<%= comment.likeCount %></i>
+                        <%} else {%> <i class="far fa-heart" aria-hidden="true">&nbsp;<%= comment.likeCount %></i> <% } %>
+                        </span>
+                    </a>
+                    <% if (comment.canDelete) {%>
+                    <a class="level-item" aria-label="delete" href="/post/comment/delete/?parent=<%= comment.parentId %>&comment=<%= comment.postId %>">
+                        <span class="icon is-small">
+                        <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <% } %>
+                    </div>
+                </nav>
+                </div>
+            </article>
+            <% }) %>
+        <% } %>
+        </div>
+        <div class="media-right">
+            <a class="level-item" aria-label="delete" href="/home/notification/delete/<%= feed.postId %>">
+                <span class="icon is-small">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    </div>
+<% }); %>
+<% } else { %>
+<h1>NO Tweez</h1>
+<% } %>

@@ -1,0 +1,116 @@
+<!--Update Profle -->
+<div class="box">
+    <h3 class="title is-3">Update Profile</h3>
+    <div class="container">
+        <% messages.forEach(function(message){ %>
+            <div class="notification is-info">
+                <p><%= message %></p>
+            </div>
+        <% }); %>
+    </div>
+    <form action="/home/profile/update" method="POST">
+        <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+                <input class="input" type="text" name="firstName" value="<%= user.firstName %>">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+                <input class="input" type="text" name="lastName" value="<%= user.lastName %>">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Birthdate</label>
+            <div class="control">
+                <input class="input" type="date" name="dateOfBirth"
+                    value="<%= moment.utc(user.dateOfBirth).format('YYYY-MM-DD'); %>">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Location</label>
+            <div class="control">
+                <input class="input" type="text" name="location" value="<%= user.location %>">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Gender</label>
+            <div class="control">
+                <div class="select">
+                    <select name="gender">
+                        <option selected value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Biography</label>
+            <div class="control">
+                <textarea class="textarea" name="bio"><%= user.bio %></textarea>
+            </div>
+        </div>
+
+        <input type="submit" class="button is-link is-rounded" value="Update">
+    </form>
+</div>
+
+<!-- Change password -->
+<div class="box">
+    <h3 class="title is-3">Change Password</h3>
+    <form action="/home/profile/changePassword" method="POST">
+
+        <div class="field">
+            <label class="label">Old Password</label>
+            <div class="control">
+                <input class="input" type="password" name="oldpassword">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">New Password</label>
+            <div class="control">
+                <input class="input" type="password" name="password">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Confirm New Password</label>
+            <div class="control">
+                <input class="input" type="password" name="confirmPassword">
+            </div>
+        </div>
+
+        <input type="submit" class="button is-link is-rounded" value="Change">
+    </form>
+</div>
+
+<!-- Delete Account -->
+<div class="box">
+    <a class="level-item" aria-label="reply" onclick="toggleComment('deleteAccount');">
+        <span class="icon-text">
+            <span class="icon">
+                <i class="fas fa-minus-circle"></i>
+            </span>
+            <span>Delete Account</span>
+        </span>
+    </a>
+    <div id="deleteAccount" class="is-hidden">
+        <form action="/home/account/delete" method="POST">
+            <div class="field">
+                <label class="label">To delete account, type the your username "<%= user.username %>". </label>
+                <div class="control">
+                    <input class="input" type="text" name="username">
+                </div>
+            </div>
+            <input type="submit" class="button is-danger is-rounded" value="Delete">
+        </form>
+    </div>
+</div>

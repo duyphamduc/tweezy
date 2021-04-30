@@ -1,0 +1,36 @@
+<section class="hero">
+    <div class="login-form">
+        <h3>Login</h3>
+        <% if (hasErrors) {%>
+            <div class="error">
+                <% messages.forEach(function(message){ %>
+                    <p><%= message %></p>
+                <% }); %>
+            </div>
+        <% } %>
+        <form class="form" action="/login" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="form-item">
+                <label class="input-label" for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-item">
+                <label class="input-label" for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <div class="form-col">
+                <div class="form-col-left">
+                    <input type="checkbox" name="rememberMe" id="rememberMe" value="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+
+                <div class="form-col-right">
+                    <a href="/iforgot">Forgot Password?</a>
+                </div>
+            </div>
+
+            <input type="submit" class="btn-submit" value="Login">
+        </form>
+    </div>
+</section>
